@@ -80,8 +80,8 @@ namespace Requêtes_et_listes_à_2_dimensions__.NET_
                          where lp.Count > 4
                          from rec in lp
                          where rec.Nom.StartsWith("A")
-                         where rec.Nom.StartsWith("B")
-                         where rec.Nom.StartsWith("C")
+                         || rec.Nom.StartsWith("B")
+                         || rec.Nom.StartsWith("C")
                          orderby rec ascending
                          select new { initiale = rec.Nom[0] + "." + rec.Prenom[0] };
 
